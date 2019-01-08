@@ -82,10 +82,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="bgImg" destination="Nke-J8-XJc" id="0uh-qh-Ogx"/>
-                        <outlet property="swoosh" destination="tbT-86-TXT" id="fxD-XX-mkO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -207,6 +203,9 @@
                                         <state key="normal" title="Mens">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onMensTapped:" destination="ewq-iM-SH3" eventType="touchUpInside" id="aD5-un-mFQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cv-rN-vbk" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="70" width="414" height="50"/>
@@ -218,6 +217,9 @@
                                         <state key="normal" title="Womens">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onWomensTapped:" destination="ewq-iM-SH3" eventType="touchUpInside" id="yQY-qs-Evp"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZL-60-Asm" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="140" width="414" height="50"/>
@@ -229,10 +231,13 @@
                                         <state key="normal" title="Co-ed">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onCoedTapped:" destination="ewq-iM-SH3" eventType="touchUpInside" id="6AN-SG-Z3Y"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaa-cm-hDr" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaa-cm-hDr" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="666" width="414" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.40311964900000002" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <constraints>
@@ -243,6 +248,9 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="ewq-iM-SH3" eventType="touchUpInside" id="oD2-t7-fth"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="53" translatesAutoresizingMaskIntoConstraints="NO" id="1NJ-CT-sgF">
                                 <rect key="frame" x="0.0" y="40" width="414" height="93"/>
@@ -294,11 +302,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OSf-Rc-acn"/>
                     </view>
+                    <connections>
+                        <outlet property="nextBtn" destination="jaa-cm-hDr" id="k5c-F9-uGL"/>
+                        <segue destination="Qwu-Ah-DHL" kind="show" identifier="skillVCSegue" id="Mg1-qS-2by"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUR-rU-b4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Bbz-gN-0zu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="968.11594202898561" y="132.88043478260872"/>
+            <point key="canvasLocation" x="1029" y="123"/>
         </scene>
     </scenes>
     <resources>
